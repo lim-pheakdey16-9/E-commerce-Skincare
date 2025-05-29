@@ -3,8 +3,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('Home_page')
+    return render(request, 'accounts/index.html')
 
-
-def contactUs(request):
-    return render(request, 'accounts/ContactUs.html')
+def dashboard(request):
+    return render(request, 'accounts/admin/index.html')
