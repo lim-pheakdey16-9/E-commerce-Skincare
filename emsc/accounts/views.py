@@ -7,3 +7,6 @@ def home(request):
 
 def dashboard(request):
     return render(request, 'accounts/admin/index.html')
+
+def test(request):
+    return render(request, 'accounts/admin/test.html')

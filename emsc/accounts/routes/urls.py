@@ -3,5 +3,5 @@ from accounts import views
  
 
 urlpatterns = [
-    # path('dashboard/', views.dashboard, name="dashboard"),
+    path('test/', views.test, name="test"),
 ]
