@@ -1,0 +1,66 @@
+{% extends 'accounts/main/admin/app.html' %}
+{% block content %}
+  <div class="main-content-inner">
+    <!-- main-content-wrap -->
+    <div class="main-content-wrap">
+      <div class="flex items-center flex-wrap justify-between gap20 mb-27">
+        <h3>Type information</h3>
+        <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
+          <li>
+            <a href="#"><div class="text-tiny">Dashboard</div></a>
+          </li>
+          <li>
+            <i class="icon-chevron-right"></i>
+          </li>
+          <li>
+            <a href="{% url 'type' %}"><div class="text-tiny">Type</div></a>
+          </li>
+          <li>
+            <i class="icon-chevron-right"></i>
+          </li>
+          <li>
+            <div class="text-tiny">New Type</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Display error messages if any -->
+      {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <!-- new-category -->
+      <div class="wg-box">
+        <form class="form-new-product form-style-1" action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="name">
+            <div class="body-title">
+              Name <span class="tf-color-1">*</span>
+            </div>
+            <input class="flex-grow" type="text" placeholder="Name" name="name" tabindex="0" value="" aria-required="true" required />
+          </fieldset>
+
+          <fieldset class="name">
+            <div class="body-title">
+              Order <span class="tf-color-1">*</span>
+            </div>
+            <input class="flex-grow" type="number" placeholder="Order" name="order" tabindex="0" value="" aria-required="true" required />
+          </fieldset>
+
+          <div class="bot">
+            <a href="{% url 'type' %}" class="tf-button w208" style="background: #6c757d; margin-right: 10px;">Cancel</a>
+            <button class="tf-button w208" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-page">
+    <div class="body-text">Copyright © 2024 SurfsideMedia</div>
+  </div>
+{% endblock %}

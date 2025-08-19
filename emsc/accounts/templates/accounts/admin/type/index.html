@@ -36,41 +36,26 @@
             <thead>
               <tr>
                 <th style="text-align: center;">#</th>
-                <th style="text-align: center;">Name EN</th>
-                <th style="text-align: center;">Name KH</th>
+                <th style="text-align: center;">Name</th>
                 <th style="text-align: center;">Order</th>
-                <th style="text-align: center;">Is Active</th>
-                <th style="text-align: center;">Image</th>
                 <th style="text-align: center;">Action</th>
-              </tr>
             </thead>
-            <tbody>
-              {% for brands in brand %}
+           <tbody>
+              {% for type in types %}
                 <tr>
                   <td style="text-align: center;">{{ forloop.counter }}</td>
-                  <td style="text-align: center;">{{ brands.name_kh }}</td>
-                  <td style="text-align: center;">{{ brands.name_en }}</td>
-                  <td style="text-align: center;">{{ brands.order }}</td>
-                  <td style="text-align: center;">{{ brands.is_active }}</td>
-                  {% load static %}
-
-                  <td style="text-align: center;">
-                    {% if brands.image %}
-                      <img src="{{ brands.image.url }}" alt="{{ brands.name_en }}" width="60" height="40" />
-                    {% else %}
-                      <img src="{% static 'image/no-image.png' %}" alt="Default Image" width="60" height="40" />
-                    {% endif %}
-                  </td>
+                  <td style="text-align: center;">{{ type.name }}</td>
+                  <td style="text-align: center;">{{ type.order }}</td>
                   <td>
                     <div class="list-icon-function">
-                      <a href="{% url 'edit' brands.id %}">
+                      <a href="{% url 'edit' type.id %}">
                         <div class="item edit">
                           <i class="icon-edit-3"></i>
                         </div>
                       </a>
-                      <form id="delete-form-{{ brands.id }}" method="POST" action="{% url 'delete' brands.id %}">
+                      <form id="delete-form-{{ type.id }}" method="POST" action="{% url 'delete' type.id %}">
                         {% csrf_token %}
-                        <a id="delete-btn-{{ brands.id }}" href="javascript:void(0);" onclick="confirmDelete({{ brands.id }})">
+                        <a id="delete-btn-{{ type.id }}" href="javascript:void(0);" onclick="confirmDelete({{ type.id }})">
                           <div class="item text-danger delete">
                             <i class="icon-trash-2"></i>
                           </div>
