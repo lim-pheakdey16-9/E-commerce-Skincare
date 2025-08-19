@@ -96,12 +96,12 @@
                               <li class="menu-item has-children">
                                   <a href="javascript:void(0);" class="menu-item-button">
                                       <div class="icon"><i class="icon-layers"></i></div>
-                                      <div class="text">Staffs</div>
+                                      <div class="text">Categories</div>
                                   </a>
                                   <ul class="sub-menu">
                                       <li class="sub-menu-item">
-                                          <a href="" class="">
-                                              <div class="text">New Staff</div>
+                                          <a href="{% url 'brand' %}" class="">
+                                              <div class="text">Brand</div>
                                           </a>
                                       </li>
                                       <li class="sub-menu-item">
@@ -477,12 +477,12 @@
  {% load static %}
   
   <!-- Include JavaScript files -->
-  <script src="{% static 'js/jquery.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap-select.min.js' %}"></script>   
-  <script src="{% static 'js/sweetalert.min.js' %}"></script>    
-  <script src="{% static 'js/apexcharts/apexcharts.js' %}"></script>
-  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'admin/js/jquery.min.js' %}"></script>
+  <script src="{% static 'admin/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'admin/js/bootstrap-select.min.js' %}"></script>   
+  <script src="{% static 'admin/js/sweetalert.min.js' %}"></script>    
+  <script src="{% static 'admin/js/apexcharts/apexcharts.js' %}"></script>
+  <script src="{% static 'admin/js/main.js' %}"></script>
   <script>
       (function ($) {
 
