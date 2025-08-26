@@ -1,4 +1,5 @@
 {% extends 'accounts/main/admin/app.html' %}
+{% load i18n %}
 {% block content %}
   <div class="main-content-inner">
     <div class="main-content-wrap">
@@ -26,7 +27,7 @@
                     <i class="icon-dollar-sign"></i>
                   </div>
                   <div>
-                    <div class="body-text mb-2">Total Amount</div>
+                    <div class="body-text mb-2">Total Amount </div>
                     <h4>481.34</h4>
                   </div>
                 </div>
@@ -187,7 +188,7 @@
                 <thead>
                   <tr>
                     <th style="width: 80px">OrderNo</th>
-                    <th>Name</th>
+                    <th>Name <p>{% trans "hello" %}</p></th>
                     <th class="text-center">Phone</th>
                     <th class="text-center">Subtotal</th>
                     <th class="text-center">Tax</th>

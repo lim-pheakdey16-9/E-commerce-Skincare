@@ -16,6 +16,8 @@ from .models import type
 from .models import color
 from .models import size
 from .models import product
+from django.utils.translation import gettext as _
+from django.utils.translation import activate
 
 def login(request):
     if request.method == 'POST':
@@ -108,7 +110,8 @@ def profile(request):
 
  
 def home(request):
-    return render(request, 'accounts/index.html')
+    output = _("Welcome to our website!")
+    return render(request, 'accounts/index.html', output)
 
 
 @login_required

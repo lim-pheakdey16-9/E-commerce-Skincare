@@ -2827,7 +2827,7 @@ a:hover, a:focus {
   font-weight: 700;
   line-height: 20px;
   border: 1px solid var(--Main);
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: var(--Main);
   background-size: 100%;
   overflow: hidden;
@@ -3032,7 +3032,7 @@ form input[type=color] {
   line-height: 20px;
   background-color: transparent;
   border: 1px solid var(--Input);
-  border-radius: 12px;
+  border-radius: 5px;
   color: var(--Heading);
   overflow: hidden;
   margin-bottom: 0;

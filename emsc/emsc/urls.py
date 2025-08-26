@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns 
+ 
  
 
 urlpatterns = [
@@ -23,3 +25,8 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('', include('accounts.routes.urls'))
 ]
+
+urlpatterns += i18n_patterns(
+    path('', include('accounts.urls')),
+    # ... add other app urls here   
+)

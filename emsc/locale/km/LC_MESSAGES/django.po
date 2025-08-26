@@ -1,0 +1,15 @@
+#: your_app/views.py:7
+msgid "Welcome to our website!"
+msgstr "សូមស្វាគមន៍មកកាន់គេហទំព័ររបស់យើង!"
+
+#: accounts/templates/your_app/home.html:7
+msgid "Homepage"
+msgstr "ទំព័រដើម"
+
+#: accounts/templates/your_app/home.html:10
+msgid "Hello, World!"
+msgstr "សួស្តី​ពិភពលោក!"
+
+#: your_app/templates/your_app/home.html:12
+msgid "This is a paragraph that will be translated."
+msgstr "នេះគឺជាកថាខណ្ឌដែលនឹងត្រូវបានបកប្រែ។
