@@ -236,7 +236,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Inter", sans-serif;
+   font-family: "Roboto", "Segoe UI", Arial, "Battambang", sans-serif,​​ "Khmer OS";
   font-weight: 400;
   color: var(--Body-Text);
   -webkit-font-smoothing: antialiased;
@@ -3031,8 +3031,8 @@ form input[type=color] {
   font-weight: 400;
   line-height: 20px;
   background-color: transparent;
-  border: 1px solid #000000;
-  border-radius: 5px;
+  border: 1px solid #4f4f4f;
+  border-radius: 3px;
   color: var(--Heading);
   overflow: hidden;
   margin-bottom: 0;
@@ -3054,7 +3054,7 @@ form input[type=search]::placeholder,
 form input[type=tel]::placeholder,
 form input[type=color]::placeholder {
   font-size: 14px;
-   font-family: "Roboto", "Segoe UI", Arial, "Battambang", sans-serif,​​ "Khmer OS";
+  font-family: "Roboto", "Segoe UI", Arial, "Battambang", sans-serif,​​ "Khmer OS";
   font-weight: 400;
   line-height: 20px;
   color: var(--Text-Holder);
