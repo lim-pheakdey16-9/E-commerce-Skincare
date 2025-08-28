@@ -3027,15 +3027,16 @@ form input[type=color] {
   width: 100%;
   padding: 14px 22px;
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+   font-family: "Roboto", "Segoe UI", Arial, "Battambang", sans-serif,​​ "Khmer OS";
   font-weight: 400;
   line-height: 20px;
   background-color: transparent;
-  border: 1px solid var(--Input);
+  border: 1px solid #000000;
   border-radius: 5px;
   color: var(--Heading);
   overflow: hidden;
   margin-bottom: 0;
+  
 }
 form textarea::placeholder,
 form input[type=text]::placeholder,
@@ -3053,7 +3054,7 @@ form input[type=search]::placeholder,
 form input[type=tel]::placeholder,
 form input[type=color]::placeholder {
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+   font-family: "Roboto", "Segoe UI", Arial, "Battambang", sans-serif,​​ "Khmer OS";
   font-weight: 400;
   line-height: 20px;
   color: var(--Text-Holder);
