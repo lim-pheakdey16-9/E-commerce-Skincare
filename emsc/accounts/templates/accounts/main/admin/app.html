@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       {% block title %}
+
       {% endblock %}
     </title>
 
@@ -17,12 +18,14 @@
     <link rel="stylesheet" href="{% static 'admin/css/animation.css' %}" />
     <link rel="stylesheet" href="{% static 'admin/css/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'admin/css/bootstrap-select.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}" />
+    {% comment %} <link rel="stylesheet" href="{% static 'admin/css/style.css' %}" /> {% endcomment %}
     <link rel="stylesheet" href="{% static 'admin/css/sweetalert.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'admin/style.css' %}" />
     <link rel="stylesheet" href="{% static 'admin/css/custom.css' %}" />
 
     <!-- Font and icons -->
-    <link rel="stylesheet" href="{% static 'admin/font/fonts.css' %}" />
+    {% comment %} <link rel="stylesheet" href="{% static 'admin/font/fonts.css' %}" /> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'admin/icon/style.css' %}" />
     <link rel="stylesheet" href="{% static 'admin/icon/style.css' %}" />
 
     <!-- Favicon -->
@@ -33,22 +36,168 @@
   <body class="body">
     <style>
       .flag {
-            width: 50px;
-            height: 30px;
-            object-fit: cover;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+        width: 50px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
     </style>
 
-     
     <div id="wrapper">
       <div id="page" class="">
         <div class="layout-wrap">
+          <div class="section-menu-left">
+            <div class="box-logo">
+              <a href="" id="site-logo-inner"><img class="logo-img" id="logo_header" src="{% static 'admin/images/logo/logo.png' %}" alt="Company Logo" width="150" height="50" /></a>
+              <div class="button-show-hide">
+                <i class="icon-menu-left"></i>
+              </div>
+            </div>
 
-        {% include "accounts/main/admin/side_bar.html" %}
+            <div class="center">
+              <div class="center-item">
+                <div class="center-heading">Main Home</div>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="{% url 'dashboard' %}" class="">
+                      <div class="icon">
+                        <i class="icon-grid"></i>
+                      </div>
+                      <div class="text">Dashboard</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="center-item">
+                <ul class="menu-list">
+                  <li class="menu-item has-children">
+                    <a href="javascript:void(0);" class="menu-item-button">
+                      <div class="icon">
+                        <i class="icon-shopping-cart"></i>
+                      </div>
+                      <div class="text">Products</div>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-item">
+                        <a href="{% url 'product' %}" class=""><div class="text">Product</div></a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">Stock</div></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item has-children">
+                    <a href="javascript:void(0);" class="menu-item-button">
+                      <div class="icon">
+                        <i class="icon-layers"></i>
+                      </div>
+                      <div class="text">Customer</div>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-item">
+                        <a href=" " class=""><div class="text">New Customer</div></a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">Customer</div></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item has-children">
+                    <a href="javascript:void(0);" class="menu-item-button">
+                      <div class="icon">
+                        <i class="icon-layers"></i>
+                      </div>
+                      <div class="text">Categories</div>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-item">
+                        <a href="{% url 'brand' %}" class=""><div class="text">Brand</div></a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="{% url 'type' %}" class=""><div class="text">Category Type</div></a>
+                      </li>
+                    </ul>
+                  </li>
 
+                  <li class="menu-item has-children">
+                    <a href="javascript:void(0);" class="menu-item-button">
+                      <div class="icon">
+                        <i class="icon-user"></i>
+                      </div>
+                      <div class="text">Users</div>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">New Users</div></a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">Users</div></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item has-children">
+                    <a href="javascript:void(0);" class="menu-item-button">
+                      <div class="icon">
+                        <i class="icon-file-plus"></i>
+                      </div>
+                      <div class="text">Categories Car</div>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">Car Mark</div></a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">Category Office</div></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item has-children">
+                    <a href="javascript:void(0);" class="menu-item-button">
+                      <div class="icon">
+                        <i class="icon-file-plus"></i>
+                      </div>
+                      <div class="text">Order</div>
+                    </a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">New Order</div></a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="" class=""><div class="text">Order</div></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a href="" class="">
+                      <div class="icon">
+                        <i class="icon-image"></i>
+                      </div>
+                      <div class="text">Products</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="users.html" class="">
+                      <div class="icon">
+                        <i class="icon-user"></i>
+                      </div>
+                      <div class="text">User</div>
+                    </a>
+                  </li>
+
+                  <li class="menu-item">
+                    <a href="settings.html" class="">
+                      <div class="icon">
+                        <i class="icon-settings"></i>
+                      </div>
+                      <div class="text">Settings</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
           <div class="section-content-right">
             <div class="header-dashboard">
@@ -176,7 +325,7 @@
                 <div class="header-grid">
                   <div class="popup-wrap user type-header">
                     <div class="dropdown">
-                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="header-user wg-user">
                           <span class=""><img src="{% static 'admin/images/uk.png' %}" alt="" class="flag" /></span>
                           <span class="flex flex-column"><span class="body-title mb-2">English</span></span>
@@ -199,14 +348,13 @@
                             <div class="body-title-2">Khmer</div>
                           </a>
                         </li>
-                      </ul> 
+                      </ul>
                       {% comment %} <nav>
-                          <span>Language:</span>
-                          <a href="/en/{{ request.path|slice:'3:' }}">English</a> |
-                          <a href="/km/{{ request.path|slice:'3:' }}">Khmer</a>
+                        <span>Language:</span>
+                        <a href="/en/{{ request.path|slice:'3:' }}">English</a> |
+                        <a href="/km/{{ request.path|slice:'3:' }}">Khmer</a>
                       </nav> {% endcomment %}
                     </div>
-                     
                   </div>
 
                   <div class="popup-wrap message type-header">
@@ -424,6 +572,8 @@
       
         jQuery(window).on('resize', function () {})
       })(jQuery)
+      
+     
     </script>
     {% block script %}
 

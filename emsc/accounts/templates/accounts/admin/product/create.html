@@ -51,7 +51,7 @@
             <input class="flex-grow" type="number" placeholder="Order" name="order" tabindex="0" value="" aria-required="true" required />
           </fieldset>
 
-           <fieldset class="name">
+          <fieldset class="name">
             <div class="body-title">
               Price <span class="tf-color-1">*</span>
             </div>
@@ -103,12 +103,21 @@
                   <option value="{{ size.id }}">{{ size.name }}</option>
                 {% endfor %}
               </select>
+              
             </div>
           </fieldset>
-
-          
-          
-
+<div class="form-group row">
+                <div class="col-md-4">
+                  <label class="textbox-label"></label>
+                </div>
+                <div class="col-xl-8">
+                  <select class="js-example-basic-single" name="">
+                    {% for size in sizes %}
+                      <option value="{{ size.id }}">{{ size.name }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
           <fieldset>
             <div class="body-title">
               images <span class="tf-color-1">*</span>
@@ -139,4 +148,6 @@
   <div class="bottom-page">
     <div class="body-text">Copyright © 2024 SurfsideMedia</div>
   </div>
+
+  
 {% endblock %}
