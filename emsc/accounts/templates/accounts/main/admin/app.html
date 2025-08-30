@@ -1,3 +1,4 @@
+ 
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +22,7 @@
     {% comment %} <link rel="stylesheet" href="{% static 'admin/css/style.css' %}" /> {% endcomment %}
     <link rel="stylesheet" href="{% static 'admin/css/sweetalert.min.css' %}" />
     <link rel="stylesheet" href="{% static 'admin/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'admin/css/custom.css' %}" />
+    <link rel="stylesheet" href="{% static 'admin/table.css' %}" />
 
     <!-- Font and icons -->
     {% comment %} <link rel="stylesheet" href="{% static 'admin/font/fonts.css' %}" /> {% endcomment %}
@@ -462,6 +463,9 @@
               {% block content %}
 
               {% endblock %}
+              <div class="bottom-page">
+                <div class="body-text">Copyright © 2024 SurfsideMedia</div>
+              </div>
             </div>
           </div>
         </div>
@@ -572,8 +576,6 @@
       
         jQuery(window).on('resize', function () {})
       })(jQuery)
-      
-     
     </script>
     {% block script %}
 
